@@ -1829,7 +1829,7 @@ _critich:   moveq     #-1,d0                    ; default return value = ERROR
 
 
 *+
-* trp13h - GEMDOS BIOS trap handler (trap 13)
+* trp13h - BIOS trap handler (trap 13)
 * trp14h - Atari BIOS extensions (trap 14)
 * traph  - trap handler
 *
@@ -1906,7 +1906,7 @@ trph3:      move.l    (a1)+,-(sp)               ; push return address
             rte                                 ; return to caller
 
 
-*------ jump table for GEMDOS functions:
+*------ jump table for BIOS functions:
 trp13tab:   DC.W      $000c                     ; number of entries in jump table
             DC.L      _get_mpb
             DC.L      bconstat
